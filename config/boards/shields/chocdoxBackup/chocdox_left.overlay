@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "chocdox.dtsi"
+
+&kscan0 {
+	col-gpios
+		= <&pro_micro_d  4 GPIO_ACTIVE_HIGH> //Col 1 D4
+		, <&pro_micro_d  3 GPIO_ACTIVE_HIGH> //Col 2 D0
+		, <&pro_micro_a  2 GPIO_ACTIVE_HIGH> //Col 3 F5
+		, <&pro_micro_a  1 GPIO_ACTIVE_HIGH> //Col 4 F6
+		, <&pro_micro_a  0 GPIO_ACTIVE_HIGH> //Col 5 F7
+		;
+};
+
+&right_encoder {
+    status = "okay";
+};
