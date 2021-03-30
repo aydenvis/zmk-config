@@ -22,7 +22,7 @@
    &kp Q       &kp W     &kp E   &kp R   &kp T        &kp Y &kp U     &kp I     &kp O    &kp P
    &mt LSHFT A &kp S     &kp D   &kp F   &kp G        &kp H &kp J     &kp K     &kp L    &kp APOS
    &kp Z       &kp X     &kp C   &kp V   &kp B        &kp N &kp M     &kp COMMA &kp DOT  &kp FSLH
-               &kp trans  &kp DEL &kp RET &to 1        &to 2 &kp SPACE &kp BSPC  &kp none
+               &none     &kp DEL &kp RET &to 1        &to 2 &kp SPACE &kp BSPC  &none
                         >;
 
                         sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp UP DN>; //Left enc does left and right arrow, right encoder does up and down arrow. If one doesn't work it's because slave side encoders are nonfunctional as of 3/29/21
