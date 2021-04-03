@@ -11,6 +11,17 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -21,13 +32,13 @@
 // |Z/hom|X/TAB|  C  |  V  |  B   |       |  N  |  M   |  ,  |  .  |//End |
 //       | LENC| DEL | RET | NUM  |       | NAV | SPACE| BSPC|RENC |
                         bindings = <
-   &mt ESC Q   &mt LPAR W &kp E   &kp R        &kp T        &kp Y &mt RPAR U  &mt LGUI I &kp O    &kp P
-   &mt LSHFT A &kp S      &kp D   &mt LCTRL F  &kp G        &kp H &mt LALT J  &kp K      &kp L    &mt RSFT APOS
-   &mt HOME Z  &mt TAB X  &kp C   &kp V        &kp B        &kp N &kp M       &kp COMMA  &kp DOT  &mt END FSLH
+   &hm ESC Q   &hm LPAR W &kp E   &kp R        &kp T        &kp Y &hm RPAR U  &hm LGUI I &kp O    &kp P
+   &hm LSHFT A &kp S      &kp D   &hm LCTRL F  &kp G        &kp H &hm LALT J  &kp K      &kp L    &hm RSFT APOS
+   &hm HOME Z  &hm TAB X  &kp C   &kp V        &kp B        &kp N &kp M       &kp COMMA  &kp DOT  &hm END FSLH
                &none      &kp DEL &kp RET      &mo 1        &mo 2 &kp SPACE   &kp BSPC   &none
                         >;
 
-                        sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp LEFT RIGHT>; //Left enc does left and right arrow, right encoder does up and down arrow. If one doesn't work it's because slave side encoders are nonfunctional as of 3/29/21
+                        sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp RIGHT LEFT>; //Left enc does left and right arrow, right encoder does up and down arrow. If one doesn't work it's because slave side encoders are nonfunctional as of 3/29/21
                 };
                 num_layer {
 // -----------------------------------------------------------------------------------------
