@@ -15,7 +15,7 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |Q/esc| W/( |  E  |  R  |  T   |       |  Y  |  U/) |I/WIN|  O  |   P  |
+// |Q/esc| W/( |  E  |  R  |  T   |       |  Y  |  U/) |I/WIN|  O  |P/Cler|
 // |A/sft|  S  |  D  |F/Ctr|  G   |       |  H  |J/ALT |  K  |  L  |'/shft|
 // |Z/hom|X/TAB|  C  |  V  |  B   |       |  N  |  M   |  ,  |  .  |//End |
 //       | LENC| DEL | RET | NUM  |       | NAV | SPACE| BSPC|RENC |
