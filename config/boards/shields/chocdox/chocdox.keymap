@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
         keymap {
@@ -31,13 +32,13 @@
 // -----------------------------------------------------------------------------------------
 // |  1  |  2  |  3  |  4  |  5  |       |  6  |  7  |  8  |  9  |  0 |
 // |Shift|  +  |  -  |  *  |  /  |       |  (  |  )  |  [  |  ]  |  ; |
-// |  =  | ~/` |  _  |  \  | CAPS|       |     |     |  ,  |  .  |Shft|
+// |  =  | ~/` |  _  |  \  | CAPS|       |BLETOG|    |  ,  |  .  |Shft|
 //       | LENC| DEL | RET | NAV |       | ALP |SPACE| BSPC|RENC |
                         bindings = <
-   &kp N1    &kp N2    &kp N3       &kp N4           &kp N5           &kp N6   &kp N7    &kp N8    &kp N9   &kp N0
-   &kp LSHFT &kp PLUS  &kp KP_MINUS &kp KP_MULTIPLY  &kp FSLH         &kp LPAR &kp RPAR  &kp LBKT  &kp RBKT &kp SEMI
-   &kp EQUAL &kp GRAVE &kp UNDER    &kp BSLH         &kp CAPS         &none    &none     &kp COMMA &kp DOT  &kp RSHFT
-             &none     &kp DEL      &kp RET          &to 2            &to 0    &kp SPACE &kp BSPC  &none
+   &kp N1    &kp N2    &kp N3       &kp N4           &kp N5           &kp N6         &kp N7    &kp N8    &kp N9   &kp N0
+   &kp LSHFT &kp PLUS  &kp KP_MINUS &kp KP_MULTIPLY  &kp FSLH         &kp LPAR       &kp RPAR  &kp LBKT  &kp RBKT &kp SEMI
+   &kp EQUAL &kp GRAVE &kp UNDER    &kp BSLH         &kp CAPS         &out OUT_TOG   &none     &kp COMMA &kp DOT  &kp RSHFT
+             &none     &kp DEL      &kp RET          &to 2            &to 0          &kp SPACE &kp BSPC  &none
                         >;                    
                 };
 
@@ -48,7 +49,7 @@
 // |  F1 | F2  | F3  | F4  |  F5 |       | F8  | F9  | F10 | F11 | F12 |
 //       | LENC| DEL | RET | ALP |       | NUM |SPACE| BSPC|RENC |
                         bindings = <
-   &kp Z      &kp X    &none   &kp C   &kp V         &kp F  &none     &kp UP   &none     &none
+   &kp Z      &kp X    &none   &kp C   &kp V         &kp F  &none     &kp UP   &none     &bootloader
    &kp LCTRL  &none    &none   &none   &kp F6        &kp F7 &kp LEFT  &kp DOWN &kp RIGHT &kp PIPE
    &kp F1     &kp F2   &kp F3  &kp F4  &kp F5        &kp F8 &kp F9    &kp F10  &kp F11   &kp F12
               &none    &kp DEL &kp RET &to 0         &to 1  &kp SPACE &kp BSPC &none
