@@ -38,7 +38,7 @@
                         bindings = <
    &kp N1    &kp N2    &kp N3       &kp N4           &kp N5           &kp N6         &kp N7    &kp N8    &kp N9   &kp N0
    &kp LSHFT &kp PLUS  &kp KP_MINUS &kp KP_MULTIPLY  &kp FSLH         &kp LPAR       &kp RPAR  &kp LBKT  &kp RBKT &kp SEMI
-   &kp EQUAL &kp GRAVE &kp UNDER    &kp BSLH         &kp CAPS         &mo 4          &none     &kp COMMA &kp DOT  &kp RSHFT
+   &kp EQUAL &kp GRAVE &kp UNDER    &kp BSLH         &kp CAPS         &to 4          &none     &kp COMMA &kp DOT  &kp RSHFT
              &none     &kp DEL      &kp RET          &to 2            &to 0          &kp SPACE &kp BSPC  &none
                         >;                    
                 };
