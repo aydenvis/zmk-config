@@ -15,3 +15,7 @@
 		, <&pro_micro_a  0 GPIO_ACTIVE_HIGH> //Col 5 F7
 		;
 };
+
+&left_encoder {
+    status = "okay";
+};
