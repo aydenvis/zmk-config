@@ -38,7 +38,7 @@
                &none      &kp DEL &kp RET      &mo 1        &mo 2 &kp SPACE   &kp BSPC   &none
                         >;
 
-                        sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp RIGHT LEFT>; //Left enc does left and right arrow, right encoder does up and down arrow. If one doesn't work it's because slave side encoders are nonfunctional as of 3/29/21
+                        sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp RIGHT LEFT>; //Left enc does left and right arrow, right encoder does up and down arrow. If one doesn't work it's because slave side encoders are nonfunctional as of 3/29/21
                 };
                 num_layer {
 // -----------------------------------------------------------------------------------------
